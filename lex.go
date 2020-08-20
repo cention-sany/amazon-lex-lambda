@@ -25,8 +25,8 @@ func botSpacedName(space string, id int) string {
 // BotName generates name that is suitable for Amazon-Lex bot name and trying
 // its best to fit in displayName for easier identification.
 func BotName(unique, displayName string) string {
-	return limitBotName(fmt.Sprint(Base26.Encode([]byte(unique)), "_",
-		Base26Only(displayName)))
+	return fmt.Sprint(Base26.Encode([]byte(unique)), "_",
+		Base26Only(displayName))
 }
 
 func ParseBotId(botName string) (int, error) {
