@@ -21,3 +21,5 @@ const (
 	INP_BY_ID  = "l"
 	INP_GLOBAL = "g"
 )
+
+const NAMER_BOTNAME_PREFIX = true

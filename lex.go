@@ -44,6 +44,18 @@ func IntentNameByEventId(space string, botId, eventId int) string {
 		spaceBoundLocalIntentName(botId, space, strconv.Itoa(eventId)))
 }
 
+// ParseEvent from intent name 'intentName'.
+func ParseEvent(botName, intentName string) (string, error) {
+	if intentName[:1] != INP_EVENT {
+		return "", errors.New("not an event intent name")
+	}
+	return strings.TrimPrefix(intentName[1:], IntentPrefix(botName)), nil
+}
+
+func IntentPrefix(botName string) string {
+	return fmt.Sprint(botName, "_")
+}
+
 // ParseEventId try to get event id from intent name.
 func ParseEventId(intentName string) (int, error) {
 	if intentName[:1] != INP_EVENT {
