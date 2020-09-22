@@ -3,6 +3,9 @@ package lexlambda
 const (
 	E_CREATE_ERRAND = iota + 1
 	E_SPEAK_TO_AGENT
+	E_FALLBACK_SUGGESTION
+	E_FALLBACK_NO_AGENT
+	E_FALLBACK_AGENT
 )
 
 const base26Encoder = "abcdefghijklmnopqrstuvwxyz"
