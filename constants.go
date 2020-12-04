@@ -7,7 +7,7 @@ const (
 	E_FALLBACK_NO_AGENT
 	E_FALLBACK_AGENT
 	E_INQUIRY_DATA
-	E_INQUIRY_DATA_ANDDON
+	E_INQUIRY_DATA_ADDON
 )
 
 const base26Encoder = "abcdefghijklmnopqrstuvwxyz"
